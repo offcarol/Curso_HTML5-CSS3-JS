@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    
+    <head>
+        <title>Teste JavaScript 02</title>
+        <meta charset="UTF-8"/>
+        <script>
+            function acendeLampada(){
+        //para o js existe diferença entre maiusculas e minusculas
+        //tudo que estiver entre parenteses são parametros, entre colchetes são codigos
+        //uma função é um conjunto de parâmetros, uma rotina
+                //alert("Lâmpada acendeu!");
+                //documento.write() escreve na tela
+                //document.getElementById() pega um elemento pela id
+                document.getElementById("luz").src = "../_imagens/teste_js_02/lampada-acesa.jpg";
+            }
+            
+            function apagaLampada(){
+                document.getElementById("luz").src = "../_imagens/teste_js_02/lampada-apagada.jpg";
+            }
+            
+            function quebraLampada(){
+                document.getElementById("luz").src = "../_imagens/teste_js_02/lampada-quebrada.jpg";
+            }
+        </script>
+        
+    </head>
+    
+    <body>
+        
+        <h1>Acenda a Lâmpada</h1>
+        <img src="../_imagens/teste_js_02/lampada-apagada.jpg" id="luz" onmousemove="acendeLampada()" onmouseout="apagaLampada()" onclick = "quebraLampada()"/>
+        <!--onclick="acendeLampada()" dispara quando clica na imagem 
+            onmousemove="acendeLampada()" o evento é disparado quando passa o mouse por cima da imagem
+            onmouseout="apagaLampada()" o evento é disparado quando tira o mouse de cima da imagem-->
+    </body>
+    
+</html>

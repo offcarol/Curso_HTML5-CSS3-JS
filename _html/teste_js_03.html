@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    
+    <head>
+        <title>Teste JavaScript 02</title>
+        <meta charset="UTF-8"/>
+        <script>
+        
+            var quebrada = false; //base para máquina de estado
+            
+            //passagem de parâmetros na função
+            function mudaLampada(tipo){
+                
+                //if (tipo == 1){
+                //    arquivo = "../_imagens/teste_js_02/lampada-acesa.jpg";
+                //}
+                
+                //if (tipo == 2){
+                //    arquivo = "../_imagens/teste_js_02/lampada-apagada.jpg";
+                //}
+                
+                //if (tipo == 3){
+                //    arquivo = "../_imagens/teste_js_02/lampada-quebrada.jpg";
+                //}
+                
+                // não = !
+                //if(!quebrada){
+                //    document.getElementById("luz").src = arquivo;
+                //    if (tipo == 3){
+                //        quebrada = true;
+                //    }
+                //}
+                
+                //codigo simplificado
+                if(!quebrada){
+                    document.getElementById("luz").src = "../_imagens/teste_js_02/" + tipo + ".jpg";
+                    if (tipo == 'lampada-quebrada'){
+                        quebrada = true;
+                    }
+                }
+            }
+
+        </script>
+        
+    </head>
+    
+    <body>
+        
+        <h1>Acenda a Lâmpada</h1>
+        <!--<img src="../_imagens/teste_js_02/lampada-apagada.jpg" id="luz" onmousemove="mudaLampada(1)" onmouseout="mudaLampada(2)" onclick = "mudaLampada(3)"/-->
+        <img src="../_imagens/teste_js_02/lampada-apagada.jpg" id="luz" onmousemove="mudaLampada('lampada-acesa')" onmouseout="mudaLampada('lampada-apagada')" onclick = "mudaLampada('lampada-quebrada')"/>
+    </body>
+    
+</html>
